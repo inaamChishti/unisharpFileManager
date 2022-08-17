@@ -23,7 +23,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
      \UniSharp\LaravelFilemanager\Lfm::routes();
  });
-Route::get('laravel-filemanager', [FileManagerController::class, 'index']);
+//Route::get('laravel-filemanager', [FileManagerController::class, 'index']);
 Route::prefix('laravel-filemanager')->middleware('web','auth')->group(function (){
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
